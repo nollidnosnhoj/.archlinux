@@ -5,6 +5,7 @@ PACKAGES=(
     unzip
     git
     base-devel
+    openssh
 )
 
 sudo pacman -Syu --noconfirm --needed "${PACKAGES[@]}"
