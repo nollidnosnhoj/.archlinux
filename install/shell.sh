@@ -1,6 +1,7 @@
 PACKAGES=(
     zsh
     starship
+    keychain
 )
 
 paru -S --needed --noconfirm "${PACKAGES[@]}"
