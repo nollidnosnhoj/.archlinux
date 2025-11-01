@@ -6,5 +6,9 @@ PACKAGES=(
 
 paru -S --needed --noconfirm "${PACKAGES[@]}"
 
-echo "Changing default shell to zsh"
-chsh -s /bin/zsh
+if [ "$SHELL" = "/bin/zsh" ]; then
+    echo "zsh is already the default shell"
+else
+    echo "Changing default shell to zsh"
+    chsh -s /bin/zsh
+fi
