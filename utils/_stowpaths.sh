@@ -1,1 +1,1 @@
-export STOW_PATHS="fastfetch,mise,neovim,niri,starship"
+export STOW_PATHS="fastfetch,fish,mise,neovim,niri,starship"
