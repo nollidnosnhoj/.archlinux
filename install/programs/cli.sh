@@ -15,4 +15,4 @@ PACKAGES=(
     plocate
 )
 
-paru -S --needed --noconfirm "${PACKAGES[@]}"
+yay -S --needed --noconfirm "${PACKAGES[@]}"

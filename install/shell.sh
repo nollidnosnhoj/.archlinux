@@ -1,14 +1,14 @@
 PACKAGES=(
-    zsh
+    fish
     starship
     keychain
 )
 
-paru -S --needed --noconfirm "${PACKAGES[@]}"
+yay -S --needed --noconfirm "${PACKAGES[@]}"
 
-if [ "$SHELL" = "/bin/zsh" ]; then
-    echo "zsh is already the default shell"
+if [ "$SHELL" = "/usr/bin/fish" ]; then
+    echo "fish is already the default shell"
 else
-    echo "Changing default shell to zsh"
-    chsh -s /bin/zsh
+    echo "Changing default shell to fish"
+    chsh -s /usr/bin/fish
 fi

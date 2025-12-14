@@ -11,7 +11,7 @@ PACKAGES=(
     papirus-icon-theme-git
 )
 
-paru -S --needed --noconfirm "${PACKAGES[@]}"
+yay -S --needed --noconfirm "${PACKAGES[@]}"
 
 gsettings set org.gnome.desktop.interface icon-theme "Papirus-Dark"
 gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Ice"

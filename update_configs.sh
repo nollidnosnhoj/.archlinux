@@ -21,10 +21,6 @@ fi
 
 echo "STOW_PATHS: $STOW_PATHS"
 
-chmod +x ./install/**/*.sh
-for f in ./install/*.sh; do 
-    echo "Running $f"
-    source "$f"
-    echo "$f done"
-    echo ""
+for folder in $(echo $STOW_PATHS | sed "s/,/ /g"); do
+    source ./utils/stow.sh $folder
 done

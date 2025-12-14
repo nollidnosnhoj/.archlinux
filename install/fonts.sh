@@ -13,4 +13,4 @@ PACKAGES=(
     ttf-font-awesome
 )
 
-paru -S --needed --noconfirm "${PACKAGES[@]}"
+yay -S --needed --noconfirm "${PACKAGES[@]}"

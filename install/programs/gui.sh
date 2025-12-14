@@ -13,4 +13,4 @@ PACKAGES=(
     vesktop-bin
 )
 
-paru -S --needed "${PACKAGES[@]}"
+yay -S --needed "${PACKAGES[@]}"

@@ -9,6 +9,6 @@ PACKAGES=(
     blueman
 )
 
-paru -S --needed --noconfirm "${PACKAGES[@]}"
+yay -S --needed --noconfirm "${PACKAGES[@]}"
 
 sudo systemctl enable --now bluetooth.service

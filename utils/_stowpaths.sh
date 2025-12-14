@@ -1,0 +1,1 @@
+export STOW_PATHS="fastfetch,mise,neovim,niri,starship"

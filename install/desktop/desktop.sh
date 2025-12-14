@@ -20,7 +20,7 @@ PACKAGES=(
     wlsunset
 )
 
-paru -S --needed --noconfirm "${PACKAGES[@]}"
+yay -S --needed --noconfirm "${PACKAGES[@]}"
 
 systemctl --user add-wants niri.service xwayland-satellite.service
 

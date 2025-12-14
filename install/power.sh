@@ -3,7 +3,7 @@ if [ "$IS_WSL" == "1" ]; then
     return 0
 fi
 
-paru -S --noconfirm --needed power-profiles-daemon
+yay -S --noconfirm --needed power-profiles-daemon
 
 if ls /sys/class/power_supply/BAT* &>/dev/null; then
   # This computer runs on a battery

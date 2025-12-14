@@ -5,12 +5,13 @@ PACKAGES=(
     neovim-git
     luarocks
     tree-sitter-cli
+    opencode-bin
 )
 
-paru -S --needed --noconfirm "${PACKAGES[@]}"
+yay -S --needed --noconfirm "${PACKAGES[@]}"
 
 if ! command -v mise &> /dev/null; then
-    echo "mise is not installed. Install if afterwards using: paru -S mise"
+    echo "mise is not installed. Install if afterwards using: yay -S mise"
 else
     mise install
 fi
