@@ -7,6 +7,8 @@ if [ "$(pwd -P)" != "$HOME/.archlinux" ]; then
     exit 1
 fi
 
+git submodule update --init --recursive
+
 chmod +x ./install/*.sh
 for f in ./install/*.sh; do
     source "$f"
