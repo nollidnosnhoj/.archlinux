@@ -1,0 +1,6 @@
+[tools]
+go = "latest"
+usage = "latest"
+bun = "latest"
+node = "latest"
+deno = "latest"
