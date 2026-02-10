@@ -28,3 +28,8 @@ git config --global user.email "me@nollidnosnhoj.com"
 git config --global gpg.format ssh
 git config --global user.signingkey ~/.ssh/id_ed25519.pub
 git config --global commit.gpgsign true
+
+# Installing language servers
+go install golang.org/x/tools/gopls@latest
+
+bun add -g typescript typescript-language-server
