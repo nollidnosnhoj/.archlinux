@@ -9,7 +9,6 @@ PACKAGES=(
     adw-gtk-theme
     nwg-look
     nautilus
-    gnome-keyring
     fuzzel
 )
 

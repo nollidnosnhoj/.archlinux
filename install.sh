@@ -8,8 +8,11 @@ if [ "$(pwd -P)" != "$HOME/.archlinux" ]; then
     exit 1
 fi
 
-# get git submodules, including the nvim configuration
-git submodule update --init --recursive
+# Make all bin scripts executable
+chmod +x ./bin/*
+
+# Update dotfiles
+./bin/link_dotfiles
 
 # Make all installation scripts executable
 chmod +x ./install/*.sh
@@ -19,8 +22,5 @@ for f in ./install/*.sh; do
     source "$f"
 done
 
-# Make all bin scripts executable
-chmod +x ./bin/*
-
-# Update (stow) dotfiles
-./bin/dotfiles
+# get git submodules, including the nvim configuration
+git submodule update --init --recursive
