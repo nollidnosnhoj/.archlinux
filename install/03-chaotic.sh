@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 if grep -q "\[chaotic-aur\]" /etc/pacman.conf; then
     echo "Chaotic AUR is already enabled."
 else

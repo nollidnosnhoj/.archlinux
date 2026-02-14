@@ -1,15 +1,18 @@
-#!/usr/bin/env bash
-
 PACKAGES=(
+    adw-gtk-theme
+    cava
+    cliphist
+    ddcutil
+    fuzzel
+    nautilus
     niri
-    xwayland-satellite
+    noctalia-shell
+    nwg-look
+    wlsunset
+    xdg-desktop-portal
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
-    noctalia-shell
-    adw-gtk-theme
-    nwg-look
-    nautilus
-    fuzzel
+    xwayland-satellite
 )
 
 paru -S --needed --noconfirm "${PACKAGES[@]}"

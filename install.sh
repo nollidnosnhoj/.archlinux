@@ -8,12 +8,6 @@ if [ "$(pwd -P)" != "$HOME/.archlinux" ]; then
     exit 1
 fi
 
-# Make dotfiles script executable
-chmod +x ./dotfiles.sh
-
-# Update dotfiles
-./dotfiles.sh link
-
 # Make all installation scripts executable
 chmod +x ./install/*.sh
 
