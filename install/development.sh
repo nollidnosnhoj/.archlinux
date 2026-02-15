@@ -1,22 +1,21 @@
 PACKAGES=(
-    bun
     code
     docker
     docker-compose
-    fnm
     gcc
     git
     github-cli
-    go
     lazydocker
     lazygit
     lua-language-server
     luarocks
     make
     markdown-oxide-git
+    mise
     neovim-git
     opencode-bin
     tree-sitter-cli
+    usage # required by mise
     zed
 )
 
