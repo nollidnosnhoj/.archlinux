@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
-# check if the current directory is in $HOME/.archlinux
-if [ "$(pwd -P)" != "$HOME/.archlinux" ]; then
-    echo 'This script should be installed from .archlinux folder'
-    exit 1
+OS_NAME="$(uname -s)"
+
+if [ "$OS_NAME" = "Darwin" ]; then
+    bash "./install_mac.sh" "$@"
+    exit 0
 fi
 
-# Make all installation scripts executable
-chmod +x ./install/*.sh
+if [ "$OS_NAME" = "Linux" ] && [ -f /etc/os-release ]; then
+    . /etc/os-release
+    if [ "${ID:-}" = "arch" ] || [[ "${ID_LIKE:-}" == *"arch"* ]]; then
+        bash "./install_arch.sh" "$@"
+        exit 0
+    fi
+fi
 
-# Execute each installation scripts
-for f in ./install/*.sh; do
-    source "$f"
-done
-
-# get git submodules, including the nvim configuration
-git submodule update --init --recursive
+echo "Unsupported operating system. This installer currently supports Arch Linux and macOS only." >&2
+exit 1
